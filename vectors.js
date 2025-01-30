@@ -1,6 +1,6 @@
 const vector = Array();
 
-vector.push(10, 20, 30);
+vector.push(10, 20, 31);
 
 console.log(vector);
 
@@ -15,3 +15,23 @@ for (let count = 0; count < vector.length; count++) {
 }
 
 console.log(sum);
+
+let verifier;
+let divider;
+
+if (sum <= 1)   {
+    verifier = false;
+}   else    {
+    verifier = true;
+    divider = 2;
+
+    while (divider < sum && verifier)   {
+        if (sum % divider === 0)    {
+            verifier = false;
+        }   else    {
+            divider++;
+        }
+    }
+}
+
+console.log(verifier);
