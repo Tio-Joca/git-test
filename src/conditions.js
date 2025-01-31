@@ -8,24 +8,13 @@ if ((a === 'M' && b >= 65 && c >= 25) ^ (a === 'F' && b >= 62 && c >= 20))  {
     console.log("Keep working.");
 }
 
-function prime (x)  {
-    let verify;
-    let divider;
-
-    if (x <= 1) {
+function prime (x, y = 2)   {
+    if (x <= 1 ^ (x % y === 0 && x !== y)) {
         return false;
+    }   else if (x === y)   {
+        return true;
     }   else    {
-        divider = 2;
-        verify = true;
-
-        while (divider < x && verify)   {
-            if (x % divider === 0)  {
-                verify = false;
-            }   else    {
-                ++divider;
-            }
-        }
-        return verify;
+        return prime(x, y + 1);
     }
 }
 
