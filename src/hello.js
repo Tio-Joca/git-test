@@ -1,1 +1,5 @@
-console.log("Hello Joaquim");
+function main ()    {
+    console.log("Hello Joaquim");
+}
+
+main();

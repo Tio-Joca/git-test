@@ -1,6 +1,4 @@
-const vector = Array();
-
-vector.push(10, 20, 31);
+const vector = [10, 20, 31];
 
 console.log(vector);
 
