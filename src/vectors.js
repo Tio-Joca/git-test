@@ -33,3 +33,29 @@ if (sum <= 1)   {
 }
 
 console.log(verifier);
+
+
+function perfectSquareNumber (sum) {
+    let aux;
+    let result;
+
+    if (sum === 1)  {
+        return true;
+    }   else    {
+        aux = 2;
+        result = 4;
+
+        while (sum > result)    {
+            aux++;
+            result = aux * aux;
+        }
+
+        if (result === sum) {
+            return true;
+        }   else    {
+            return false;
+        }
+    }
+}
+
+console.log(perfectSquareNumber(sum));
